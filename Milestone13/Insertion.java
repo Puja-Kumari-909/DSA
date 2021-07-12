@@ -1,4 +1,3 @@
-import javax.swing.plaf.InsetsUIResource;
 
 public class Insertion {
 
