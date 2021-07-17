@@ -1,3 +1,5 @@
+//Given an array 20, 10, 33, 50, 32, 31, 40, 70, 60. Sort the array only if the difference between the elements is >=10
+
 public class LetsTry {
     static void mergeIt(int[] arr, int l, int m, int r){
         int size1 = m-l+1;
@@ -81,3 +83,6 @@ public class LetsTry {
         print(arr);
     }
 }
+
+//OUTPUT:
+//10 20, 33, 32, 31, 40, 50, 60, 70
