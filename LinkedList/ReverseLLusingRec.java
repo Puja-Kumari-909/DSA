@@ -1,8 +1,3 @@
-import java.util.LinkedList;
-
-import javax.swing.plaf.synth.SynthSplitPaneUI;
-
-import jdk.javadoc.internal.doclets.formats.html.SystemPropertiesWriter;
 
 public class ReverseLLusingRec {
 
