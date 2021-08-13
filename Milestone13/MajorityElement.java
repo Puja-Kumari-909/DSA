@@ -1,3 +1,8 @@
+/* find the majority element in agiven array
+    a majority element is that element which
+    has a a greater frequency than the (number of elements present)/2
+*/
+
 import java.util.Arrays;
 
 public class MajorityElement {
