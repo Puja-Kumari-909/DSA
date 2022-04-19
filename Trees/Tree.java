@@ -56,6 +56,60 @@ public class Tree {
 
     }
 
+    static void morrisInorder(Node root){
+        Node curr = root;
+        
+        while(curr != null){
+            if(curr.left == null){
+                System.out.print(curr.data + " ");
+                curr = curr.right;
+            }
+            else{
+                Node prev = curr.left;
+                while(prev.right!= null && prev.right != curr){
+                    prev = prev.right;
+                }
+                
+                if(prev.right == null){
+                    prev.right = curr;
+                    curr = curr.left;
+                }
+                else{
+                    prev.right = null;
+                    System.out.print(curr.data + " ");
+                    curr = curr.right;
+                }
+            }
+        }
+    }
+
+    static void morrisPreorder(Node root){
+        Node curr = root;
+        
+        while(curr != null){
+            if(curr.left == null){
+                System.out.print(curr.data + " ");
+                curr = curr.right;
+            }
+            else{
+                Node prev = curr.left;
+                while(prev.right!= null && prev.right != curr){
+                    prev = prev.right;
+                }
+                
+                if(prev.right == null){
+                    prev.right = curr;
+                    System.out.print(curr.data + " ");
+                    curr = curr.left;
+                }
+                else{
+                    prev.right = null;
+                    curr = curr.right;
+                }
+            }
+        }
+    }
+
     static int height(Node node){
         if(node == null)
             return 0;
@@ -84,5 +138,10 @@ public class Tree {
         printLeaf(node);
         System.out.println();
         System.out.println("Height of this binary tree is: "+height(node));
+        System.out.println("Morris inorder Traversal of this tree is: ");
+        morrisInorder(node);
+        System.out.println();
+        System.out.println("Morris preorder Traversal of this tree is: ");
+        morrisPreorder(node);
     }
 }
